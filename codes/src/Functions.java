@@ -64,23 +64,45 @@
 //        Also,
 //        1! = 1
 //        0! = 1
+//import java.util.*;
+//public class Functions{
+//    public static void factorial(int n){
+//        if(n==1 || n==0){
+//            System.out.println("1");
+//        }
+//        int product=1;
+//        System.out.print(n+"! : ");
+//        for(int i=1;i<=n;i++){
+//            product*=i;
+//            System.out.print(i+" ");
+//            if(i<n)
+//                System.out.print("* ");
+//        }
+//        System.out.println(" : "+ product);
+//    }
+//    public static void main(String[] args) {
+//        factorial(5);
+//    }
+//}
+
+/// 4. IS AMSTRONG OR NOT
 import java.util.*;
 public class Functions{
-    public static void factorial(int n){
-        if(n==1 || n==0){
-            System.out.println("1");
+    public static boolean isAmstrong(int n){
+        int original=n;
+        int sum=0;
+        while(n>0){
+            int digit=n%10;
+            n/=10;
+            sum+=digit*digit*digit;
         }
-        int product=1;
-        System.out.print(n+"! : ");
-        for(int i=1;i<=n;i++){
-            product*=i;
-            System.out.print(i+" ");
-            if(i<n)
-                System.out.print("* ");
-        }
-        System.out.println(" : "+ product);
+        return sum==original;
     }
     public static void main(String[] args) {
-        factorial(5);
+        //PRINTING AMSTRONG FOR 3 DIGITS
+        for(int i=100;i<=999;i++){
+            if(isAmstrong(i))
+                System.out.print(i+" ");
+        }
     }
 }
