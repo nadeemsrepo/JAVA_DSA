@@ -8,7 +8,7 @@ package NQT.PYQ;
 //Your task is to print all cryptic numbers in the given range.
 //If no such number exists, print -1.
 import java.util.*;
-public class Tcs_Tag_Question {
+public class Tcs_Tag_Question1 {
 //    Function for palindrome
     public static boolean isPalindrome(int n){
         int original=0;
